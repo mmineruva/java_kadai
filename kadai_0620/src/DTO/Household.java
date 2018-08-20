@@ -1,13 +1,13 @@
 package DTO;
 
-public class household {
+public class Household {
 	private String day;
 	private int income;
 	private int spending;
 	private int money;
 	private String item;
 
-	public household(String day, int income, int spending, int money, String item) {
+	public Household(String day, int income, int spending, int money, String item) {
 		this.day = day;
 		this.income = income;
 		this.spending = spending;

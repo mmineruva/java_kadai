@@ -18,7 +18,7 @@ public class InsertSpendingDao {
 			Class.forName("com.mysql.jdbc.Driver");
 
 			con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/household?useSSL=false",
+					"jdbc:mysql://localhost:3306/book?useSSL=false",
 					"user2",
 					"pass");
 			String sql = "INSERT INTO household values(?, ?, ?)";

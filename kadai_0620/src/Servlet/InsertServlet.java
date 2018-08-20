@@ -15,7 +15,7 @@ import DAO.InsertIncomeDao;
 /**
  * Servlet implementation class ResultServlet
  */
-@WebServlet("/InsertServlet")
+@WebServlet("/ins_result")
 public class InsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -49,7 +49,7 @@ public class InsertServlet extends HttpServlet {
 
 
 
-		request.setAttribute("Householed", insertincome);
+		request.setAttribute("household", insertincome);
 
 		String view = "/WEB-INF/view/ins_result.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);

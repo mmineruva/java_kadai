@@ -18,10 +18,10 @@ public class InsertIncomeDao {
 			Class.forName("com.mysql.jdbc.Driver");
 
 			con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/household?useSSL=false",
+					"jdbc:mysql://localhost:3306/Book?useSSL=false",
 					"user2",
 					"pass");
-			String sql = "INSERT INTO household values(?, ?, ?)";
+			String sql = "INSERT INTO Household values(?, ?, ?)";
 			pstmt = con.prepareStatement(sql);
 			int income = Integer.parseInt(incomeStr);
 			pstmt.setString(1, day);
