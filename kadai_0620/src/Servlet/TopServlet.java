@@ -1,6 +1,5 @@
 package Servlet;
 
-
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -13,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class TopServlet
  */
-@WebServlet("/InsertIncomeTopServlet")
-public class InsertIncomeTopServlet extends HttpServlet {
+@WebServlet("/TopServlet")
+public class TopServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InsertIncomeTopServlet() {
+    public TopServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,7 +28,7 @@ public class InsertIncomeTopServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String view = "/WEB-INF/view/ins_top.jsp";
+		String view = "/WEB-INF/view/top.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
 	}

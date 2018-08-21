@@ -11,7 +11,7 @@
 	<%
 	request.setCharacterEncoding("UTF-8");
 
-	Household result = (Household)request.getAttribute("household");
+	Household result = (Household)request.getAttribute("house");
 	%>
 	<p>登録が完了しました。</p>
 </body>

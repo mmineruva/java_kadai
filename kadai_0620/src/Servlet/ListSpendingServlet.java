@@ -1,4 +1,3 @@
-
 package Servlet;
 
 import java.io.IOException;
@@ -11,20 +10,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import DAO.ListDao;
-import DTO.Household;
+import DAO.ListSpendingDao;
+import DTO.Spending;
 
 /**
  * Servlet implementation class ListResultServlet
  */
 @WebServlet("/ListServlet")
-public class ListServlet extends HttpServlet {
+public class ListSpendingServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public ListServlet() {
+	public ListSpendingServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -37,14 +36,14 @@ public class ListServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 		//データベースから値を取得
-		ArrayList<Household> hold = ListDao.getAllHouse();
+		ArrayList<Spending> house = ListSpendingDao.getAllSpending();
 
 
 		//取得した値をリクエストスコープへ
-		request.setAttribute("param",hold);
+		request.setAttribute("param2",house);
 
 		//結果表示用のJSPへフォワード
-		String view = "/WEB-INF/view/List.jsp";
+		String view = "/WEB-INF/view/SPList.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
 	}

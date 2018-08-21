@@ -21,7 +21,7 @@ public class InsertIncomeDao {
 					"jdbc:mysql://localhost:3306/Book?useSSL=false",
 					"user2",
 					"pass");
-			String sql = "INSERT INTO Household values(?, ?, ?)";
+			String sql = "INSERT INTO income values(?, ?, ?)";
 			pstmt = con.prepareStatement(sql);
 			int income = Integer.parseInt(incomeStr);
 			pstmt.setString(1, day);

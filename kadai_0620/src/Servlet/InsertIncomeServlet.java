@@ -15,14 +15,14 @@ import DAO.InsertIncomeDao;
 /**
  * Servlet implementation class ResultServlet
  */
-@WebServlet("/ins_result")
-public class InsertServlet extends HttpServlet {
+@WebServlet("/inc_result")
+public class InsertIncomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InsertServlet() {
+    public InsertIncomeServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -44,6 +44,7 @@ public class InsertServlet extends HttpServlet {
 		String day = request.getParameter("day");
 		String incomeStr = request.getParameter("income");
 		String item = request.getParameter("item");
+
 
 		String insertincome = InsertIncomeDao.insertDao(day,incomeStr,item);
 

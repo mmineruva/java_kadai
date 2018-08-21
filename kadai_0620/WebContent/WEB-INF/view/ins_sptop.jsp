@@ -2,16 +2,16 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<title>家計簿システム【収入入力画面】</title>
+<title>家計簿システム【支出入力画面】</title>
 </head>
 <body>
 <header>
 </header>
 
-	【収入登録画面】<br>
-	<form action="/kadai_0620/inc_result" method="post">
+	【支出登録画面】<br>
+	<form action="/kadai_0620/spe_result" method="post">
 		日付：<input type="text" name="day"><br>
-		収入：<input type="text" name="income"><br>
+		支出：<input type="text" name="spending"><br>
 		項目名：<input type="text" name ="item"><br>
 		<input type="submit" value="送信">
 

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class InsertSpendingDao {
 
-	public static String insertDao(String day,String spendingStr,String item) {
+	public static String spendingDao(String day,String spendingStr,String item) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		int rs = 0;
@@ -18,10 +18,10 @@ public class InsertSpendingDao {
 			Class.forName("com.mysql.jdbc.Driver");
 
 			con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/book?useSSL=false",
+					"jdbc:mysql://localhost:3306/Book?useSSL=false",
 					"user2",
 					"pass");
-			String sql = "INSERT INTO household values(?, ?, ?)";
+			String sql = "INSERT INTO spending values(?, ?, ?)";
 			pstmt = con.prepareStatement(sql);
 			int spending = Integer.parseInt(spendingStr);
 			pstmt.setString(1, day);

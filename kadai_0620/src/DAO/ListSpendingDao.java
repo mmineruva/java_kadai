@@ -7,17 +7,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import DTO.Household;
+import DTO.Spending;
 
 
-public class ListDao {
+public class ListSpendingDao {
 
-	public static ArrayList<Household> getAllHouse()  {
+	public static ArrayList<Spending> getAllSpending()  {
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		ArrayList<Household> result = new ArrayList<Household>();
+		ArrayList<Spending> result = new ArrayList<Spending>();
 		try{
 
 			Class.forName("com.mysql.jdbc.Driver");
@@ -27,7 +27,7 @@ public class ListDao {
 					"user2",
 					"pass");
 
-			String sql = "SELECT * FROM household;";
+			String sql = "SELECT * FROM spending;";
 
 			pstmt = con.prepareStatement(sql);
 
@@ -35,12 +35,10 @@ public class ListDao {
 
 			while(rs.next() == true) {
 				String day = rs.getString("day");
-				int income = rs.getInt("income");
 				int spending = rs.getInt("spending");
-				int money = rs.getInt("money");
 				String item = rs.getString("item");
 
-				Household hold = new Household(day,income,spending,money,item);
+				Spending hold = new Spending(day,spending,item);
 
 				result.add(hold);
 
